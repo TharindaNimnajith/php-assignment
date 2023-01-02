@@ -2,35 +2,40 @@
 
 require 'config.php';
 
-function getRandomFact()
+function getRandomFact(): string
 {
     global $array;
     $rand = array_rand($array);
     return $array[$rand]->fact;
 }
 
-function getFactWithNumber()
+function getFactWithNumber(): string
 {
     global $array;
 
     do {
         $rand = array_rand($array);
         $fact = $array[$rand]->fact;
-    } while (!preg_match('~[0-9]+~', $fact));
+    } while (!hasNumber($fact));
 
     return $fact;
 }
 
-function getFactWithoutNumber()
+function getFactWithoutNumber(): string
 {
     global $array;
 
     do {
         $rand = array_rand($array);
         $fact = $array[$rand]->fact;
-    } while (preg_match('~[0-9]+~', $fact));
+    } while (hasNumber($fact));
 
     return $fact;
+}
+
+function hasNumber($fact): bool
+{
+    return preg_match('~[0-9]+~', $fact);
 }
 
 function response($fact, $response_code): void

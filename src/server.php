@@ -2,7 +2,6 @@
 
 require 'helper.php';
 
-
 if (isset($_GET['numbers']) && $_GET['numbers'] != '') {
     $numbers = $_GET['numbers'];
 
@@ -16,6 +15,5 @@ if (isset($_GET['numbers']) && $_GET['numbers'] != '') {
 if (!isset($fact)) {
     $fact = getRandomFact();
 }
-
 
 response($fact, 200);
