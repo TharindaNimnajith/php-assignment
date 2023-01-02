@@ -7,7 +7,7 @@ interesting random fact about dogs on their client facing software to make it mo
 
 During the requirement capturing phases, our business analysts have figured out that:
 
-1. There are some numberphiles using their software and prefer to see these random acts with numbers.
+1. There are some numberphiles using their software and prefer to see these random facts with numbers.
 2. There is a second group of people who prefer not to see any numbers in the facts.
 3. The rest of the users don't really mind whether there are numbers or not.
 
